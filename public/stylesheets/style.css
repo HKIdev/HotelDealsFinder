@@ -7,6 +7,12 @@ body {
   margin-left: 0 auto;
   margin-right: 0 auto;
   text-align: center;
+  display:inline-block;
+  vertical-align: middle;
+}
+.dealsCount{
+  margin-top: 10px;
+  margin-bottom: 7px;
 }
 .hotelContainer
 {

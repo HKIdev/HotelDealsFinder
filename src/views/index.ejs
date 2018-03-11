@@ -15,8 +15,8 @@
 
   <body>
     <header class="container">
+        <img src='/images/hotel-icon.png'/>
         <h1 class="titleMessage">Hotel Deals Finder</h1>
-       <!-- <span>Time: <%= new Date(); %></span> -->
     </header>
 
     <main class="container">
@@ -25,7 +25,7 @@
       <% if(!validationMessage){ %>
       <% if(hotels && hotels.length>0){ %>
       <div class="container">
-      <label>Number of Deals: <%=hotels.length %></label>
+      <label class="row dealsCount">Number of Deals: <%=hotels.length %></label>
       <%  for (var i = 0; i < hotels.length; i++) {%>
         <% var currentHotel = hotels[i] %>
         <%- include hotelRowPartial.ejs %>

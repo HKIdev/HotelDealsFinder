@@ -1,5 +1,7 @@
 # HotelDealsFinder
 
+[![Build Status](https://travis-ci.org/HKIdev/HotelDealsFinder.svg?branch=master)](https://travis-ci.org/HKIdev/HotelDealsFinder)
+
 This is a simple web applicaton that allows the user to search hotels deals with some basic filters, like travel date, location, number of stars...etc.
 
 

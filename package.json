@@ -1,7 +1,10 @@
 {
   "name": "hotelDealsFinder",
   "version": "1.0.0",
-  "description": "A test app",
+  "description": "A simple site to search hotel deals from Expedia",
+  "engines": {
+    "node": "8.10"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "lint": "esw webpack.config.* src routes views buildScripts --color",

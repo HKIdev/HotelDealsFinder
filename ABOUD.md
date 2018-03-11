@@ -2,7 +2,7 @@ Application description and design decisions:
 
 1- Language & Framework:
 
-A -Nodejs: Although my experience is more with .NET than with nodejs, I have chosen the nodejs because it seems to integrate much better with heroku and travis-ci. The .NET core does not have official support with heroku, and the third party integrations does not seem rigid and maintained (they have a lot of issues). I also like to enrich my experience in nodejs because it is the best cross-platform framework that works on all servers and even on many IOTs.
+A- Nodejs: Although my experience is more with .NET than with nodejs, I have chosen the nodejs because it seems to integrate much better with heroku and travis-ci. The .NET core does not have official support with heroku, and the third party integrations does not seem rigid and maintained (they have a lot of issues). I also like to enrich my experience in nodejs because it is the best cross-platform framework that works on all servers and even on many IOTs.
 
 B- Express: I used express web server as it is the most used web framework with nodejs, and it is easy to use.
 
@@ -32,13 +32,16 @@ Here are the folders with a brief description:
 no gulp or grunt tasks were needed because the application is very simple, npm scripts are only used. 
 
 
-3-Application testing
+3-Application Testing
 
 The unit testing with mocha/chai is used to test some javascript modules. For better results, the unit testing coverage should be thorough, and at least one end-to-end test is needed to be applied using supertest as client agent, and a json server to mock the remote API. The time constraint didn’t allow further test coverage
 
 
-4-User interface:
+4-User Interface
 
 The application is only one page, it contains the filters on the top and the results are laid down as rows. No ajax calls are used, and no front end javascript is needed. There is only one button that can make a submission to the server, and everything is done from the server side.
 The UI is basic, and can be much enhanced.
 
+5-Continuous Integration
+
+The github repository is integrated with Travis-ci for integration tests after each commit.

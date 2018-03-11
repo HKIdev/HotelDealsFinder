@@ -1,0 +1,55 @@
+<div id="filters" class="container filters clearfix">
+
+  <form action="">
+      <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-4">
+          <label class="fullwidth" for="destination">Destination</label>
+          <input class="fullwidth" type="text" name="destination" id="destination" placeholder="e.g. Amman" value=<%=Filters.destination%>>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <label class="fullwidth" for="TripStartDate">Min. Travel Date</label>
+          <input class="fullwidth" type="date" name="minTripStartDate" id="TripStartDate" placeholder="Min Trip Start Date" value=<%=Filters.minTripStartDate%>>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <label class="fullwidth" for="TripEndDate">Max. Travel Date</label>
+          <input class="fullwidth" type="date" name="maxTripStartDate" id="maxTripStartDate" placeholder="Max Trip Start Date" value=<%=Filters.maxTripStartDate%>>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+            <label class="fullwidth" >Min. Star Rating</label>
+            <input class="fullwidth" type="number" step=".5" min="1" max="5" name="starRatingFrom" id="starRatingFrom" placeholder="" value=<%=Filters.starRatingFrom%>>
+            <label class="fullwidth">Max. Star Rating</label>
+            <input class="fullwidth" type="number" step=".5" min="1" max="5" name="starRatingTo" id="starRatingTo" placeholder="" value=<%=Filters.starRatingTo%>>
+      </div>
+      <div class="col-md-4 col-sm-4">
+          <label class="fullwidth">Min. Guest Rating</label>
+          <input class="fullwidth" type="number" step=".1" min="1" max="5" name="GuestRatingFrom" id="GuestRatingFrom" placeholder="" value=<%=Filters.GuestRatingFrom%>>
+          <label class="fullwidth">Max. Guest Rating</label>
+          <input class="fullwidth" type="number" step=".1" min="1" max="5" name="GuestRatingTo" id="GuestRatingTo" placeholder="" value=<%=Filters.GuestRatingTo%>>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <label class="fullwidth">Min. Total Reviews</label>
+        <input class="fullwidth" type="number" step="1" name="TotalRateFrom" id="TotalRateFrom" placeholder="" value=<%=Filters.TotalRateFrom%>>
+        <label class="fullwidth">Max. Total Reviews</label>
+        <input class="fullwidth" type="number" step="1" name="TotalRateTo" id="TotalRateTo" placeholder="" value=<%=Filters.TotalRateTo%>>
+      </div>
+      </div>
+
+     <div class="row">
+        <!--<div class="col-md-8 col-sm-8 col-12"> </div> -->
+        <div class="col-md-4 col-sm-4">
+            <label class="fullwidth" for="destination">Days to Stay</label>
+            <input class="fullwidth" name="lengthOfStay" id="lengthOfStay" type="number" step="1" placeholder="" value=<%=Filters.lengthOfStay%>>
+        </div>
+      </div>
+      <div class="row">
+
+         <!--<div class="col-md-8 col-sm-8 col-12"> </div> -->
+          <div class="col-md-4 col-sm-4 col-12">
+              <input class="pull-left submit" type="submit" name="submit" id="submit" value="Submit" onclick="return true;">
+          </div>
+        </div>
+
+    </form>
+</div>

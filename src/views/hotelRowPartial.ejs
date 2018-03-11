@@ -1,0 +1,20 @@
+<div class="row hotelContainer">
+  <div class="row col-12">
+        <div class="pictureSection col-md-4 col-sm-4 col-xs-6">
+          <img class="hotelPicture" src=<%=currentHotel.imageUrl%> >
+        </div>
+        <div class="mainSection col-md-4 col-sm-4 col-xs-6">
+           <h4> <a href="<%=decodeURIComponent(currentHotel.url)%>"><%= currentHotel.name %> </a></h4>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <p><%= currentHotel.city %> </p>
+           <p>Stars:<%=currentHotel.starRating %></p>
+        </div>
+        <div class="infoSection col-md-4 col-sm-4 col-xs-6">
+            <p>Guest Rating: <%=currentHotel.guestRating %>/5</p>
+            <p>(<%=currentHotel.totalReviews %> reviews)</p>
+            <p>Price <%=currentHotel.price %> <%=currentHotel.priceCurrency %></p>
+        </div>
+      </div>
+</div>

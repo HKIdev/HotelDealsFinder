@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel Deals Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap -->
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <!-- site styles -->
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    </head>
+
+  <body>
+    <header class="container">
+        <h1 class="titleMessage">Hotel Deals Finder</h1>
+       <!-- <span>Time: <%= new Date(); %></span> -->
+    </header>
+
+    <main class="container">
+    <%- include hotelFiltersPartial.ejs %>
+    <% if(!errorMessage){ %>
+      <% if(!validationMessage){ %>
+      <% if(hotels && hotels.length>0){ %>
+      <div class="container">
+      <label>Number of Deals: <%=hotels.length %></label>
+      <%  for (var i = 0; i < hotels.length; i++) {%>
+        <% var currentHotel = hotels[i] %>
+        <%- include hotelRowPartial.ejs %>
+      <% } %>
+    </div>
+    <% } else { %>
+      <div class="row-fluid">
+        <div class="NoHotels text-center">
+          No hotel deals found.
+        </div>
+      </div>
+    <% } %>
+    <% } else { %>
+      <%- include validationMesssagePartial.ejs %>
+      <% } %>
+    <% } else { %>
+      <%- include errorMessagePartial.ejs %>
+    <% } %>
+  </main>
+
+ <!--  JavaScript references -->
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>

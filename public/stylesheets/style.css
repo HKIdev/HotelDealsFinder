@@ -1,0 +1,83 @@
+body {
+  padding: 0px;
+  background-color: rgb(237, 237, 237);
+}
+.titleMessage
+{
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  text-align: center;
+}
+.hotelContainer
+{
+  padding: 10px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
+  background: white;
+}
+.errorMessage{
+  font-size: 1.5em;
+  color: red;
+}
+.NoHotels{
+  font-size: 1.5em;
+}
+#filters{
+  /*background-color:#fc0;*/
+  background-color:rgba(0, 0, 0, 0.7);
+  padding-top: 5px;
+}
+.filters label{
+margin:0;
+font-size: 1.35rem;
+margin-left: 1px;
+color: white;
+padding-top: 4px;
+}
+
+.submit {
+
+margin-top: 15px;
+margin-bottom: 10px;
+width: 120px;
+background: linear-gradient(to top, rgb(255, 190, 0) 0px, rgb(255, 203, 0) 100%);
+color: black;
+padding: 4px;
+border: none;
+
+}
+.hotelPicture{
+  max-width: 140px;
+  width: 100%;
+  display:block;
+    margin:auto;
+}
+
+.hotelrow
+{
+  width: 50%;
+}
+
+.fullwidth{
+  width: 100%;
+}
+.ValidationMessage
+{
+  color: red;
+  font-size: 1.2em;
+}
+.infoSection{
+  text-align: right;
+}
+.validationContainer{
+  margin-top: 7px;
+}
+@media screen and (max-width: 768px) {
+  .infoSection{
+    text-align: center;
+  }
+  .mainSection{
+    text-align: center;
+  }
+}

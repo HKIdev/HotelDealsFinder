@@ -11,8 +11,6 @@ module.exports.GetHotels= function (hf, Callback)
 {
   var URL=ExpediaURLGenerator.GenerateURLForExpedia(Baseurl,hf);
 
-
-    console.log(URL);
     request({
         url: URL,
         json: true

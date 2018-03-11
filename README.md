@@ -12,6 +12,7 @@ This is a simple web applicaton that allows the user to search hotels deals with
 
 You need to have nodjs version 8 or higher installed on your machine. If you don't have it, you need to go and install it from nodejs web site: https://nodejs.org
 
+The application requires internet connection because it consumes a live service on Expedia site, and it has some references to files on CDN locations (like scripts and styles).
 
 ### Installing
 

@@ -28,6 +28,12 @@ if (CaptionKeys && CaptionKeys.length>0 )
     case "MIN_TRIP_DATE_SHOULD_BE_LESS_THAN_MAX":
         text = "Minimum Travel Date should be less Maximum Travel Date!";
         break;
+    case "MIN_TRIP_DATE_SHOULD_BE_LARGER_THAN_TODAY":
+        text = "Minimum Travel Date should be after today!";
+        break;
+    case "MAX_TRIP_DATE_SHOULD_BE_LARGER_THAN_TODAY":
+        text = "Maximum Travel Date should be after today!";
+        break;
     default:
         text = CaptionKeys[i];
 

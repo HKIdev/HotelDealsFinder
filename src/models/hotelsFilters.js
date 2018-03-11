@@ -20,21 +20,21 @@ module.exports = class hotelsFilters
     {
       if (this.starRatingFrom> this.starRatingTo)
       {
-        errors.push('MIN_STAR_RATING_IS_LARGER_THAN_MAX');
+        errors.push("MIN_STAR_RATING_IS_LARGER_THAN_MAX");
       }
     }
     if (this.GuestRatingFrom && this.GuestRatingTo)
     {
       if (this.GuestRatingFrom> this.GuestRatingTo)
       {
-        errors.push('MIN_GUEST_RATING_IS_LARGER_THAN_MAX');
+        errors.push("MIN_GUEST_RATING_IS_LARGER_THAN_MAX");
       }
     }
     if (this.TotalRateFrom && this.TotalRateTo)
     {
       if (this.TotalRateFrom> this.TotalRateTo)
       {
-        errors.push('MIN_TOTAL_RATING_IS_LARGER_THAN_MAX');
+        errors.push("MIN_TOTAL_RATING_IS_LARGER_THAN_MAX");
       }
     }
     var minTripDate;
@@ -49,7 +49,7 @@ module.exports = class hotelsFilters
       }
       else
       {
-        errors.push('MIN_TRIP_DATE_IS_INCORRECT')
+        errors.push("MIN_TRIP_DATE_IS_INCORRECT");
       }
     }
     if (this.maxTripStartDate)
@@ -62,17 +62,25 @@ module.exports = class hotelsFilters
       }
       else
       {
-        errors.push('MAX_TRIP_DATE_IS_INCORRECT');
+        errors.push("MAX_TRIP_DATE_IS_INCORRECT");
       }
     }
     if (minTripDate && maxTripDate)
     {
       if (minTripDate>maxTripDate)
       {
-        errors.push('MIN_TRIP_DATE_SHOULD_BE_LESS_THAN_MAX');
+        errors.push("MIN_TRIP_DATE_SHOULD_BE_LESS_THAN_MAX");
       }
     }
-
+    var today=new Date();
+    if(minTripDate && (minTripDate-today)<=0)
+    {
+      errors.push("MIN_TRIP_DATE_SHOULD_BE_LARGER_THAN_TODAY");
+    }
+    if(maxTripDate && (maxTripDate-today)<=0)
+    {
+      errors.push('MAX_TRIP_DATE_SHOULD_BE_LARGER_THAN_TODAY');
+    }
 
     if (errors.length>0)
       return errors;
